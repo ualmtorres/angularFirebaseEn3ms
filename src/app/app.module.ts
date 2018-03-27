@@ -4,6 +4,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2'; 
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
 
 import { FirebaseService } from './services/firebase.service'; 
 import { AngularFirestore } from 'angularfire2/firestore';
@@ -43,9 +44,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    HttpModule
+    HttpModule,
+    FlashMessagesModule
   ],
-  providers: [FirebaseService, AngularFirestore],
+  providers: [FirebaseService, AngularFirestore, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
