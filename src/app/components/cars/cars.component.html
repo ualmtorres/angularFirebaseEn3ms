@@ -1,3 +1,9 @@
-<p>
-  cars works!
-</p>
+<div class="container">
+  <div class = "row">
+    <ul class = "list-group">
+      <li class = "list-group-item" *ngFor="let car of cars">
+        {{car.marca}} {{car.modelo}}
+      </li>
+    </ul>
+  </div>
+</div>
