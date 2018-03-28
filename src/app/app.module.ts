@@ -22,11 +22,7 @@ const appRoutes: Routes = [
   {path: '', component:HomeComponent}, 
   {path: 'cars', component:CarsComponent},
   {path: 'add-car', component:AddCarComponent},
-/*  {path: 'cars', component:CarsComponent},
-  {path: 'cars', component:CarsComponent},
-  {path: 'cars', component:CarsComponent},
-  {path: 'cars', component:CarsComponent},
-*/
+  {path: 'car/:id', component:CarComponent}
 ]
 
 @NgModule({

@@ -2,7 +2,7 @@
   <div class = "row">
     <ul class = "list-group">
       <li class = "list-group-item" *ngFor="let car of cars">
-        {{car.marca}} {{car.modelo}}
+        <a [routerLink]="['/car/'+car.id]">{{car.marca}} {{car.modelo}}</a>
       </li>
     </ul>
   </div>

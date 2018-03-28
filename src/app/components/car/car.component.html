@@ -1,3 +1,15 @@
-<p>
-  car works!
-</p>
+<div class = "container">
+  <div class = "row">
+    <a [routerLink]="['/cars']">Atrás</a>
+  </div>
+  <div *ngIf="car" class="row">
+    <div class = "group-list">
+      <div class = "group-list-item">
+        <h1>{{car.marca}} {{car.modelo}}</h1>
+        <h3>Potencia: {{car.potencia}} CV</h3>
+        <h3>Velocidad máxima: {{car.velocidadMaxima}}</h3>
+        <p>País de origen: {{car.fabricacion}}</p>
+      </div>
+    </div>
+  </div>
+</div>
